@@ -27,3 +27,36 @@ Constraints:
 -10^6 <= nums[i] <= 10^6
 
 */
+
+//Solution 1
+var runningSum = function (nums) {
+  let arr = [];
+  for (let i = 1; i <= nums.length; i++) {
+    arr.push(nums.slice(0, i).reduce((a, b) => a + b, 0));
+  }
+
+  return arr;
+};
+
+//Solution 2 Using Separate Space
+var runningSum = function (nums) {
+  let result = new Array(nums.length);
+  result[0] = nums[0];
+  for (let i = 1; i < nums.length; i++) {
+    result[i] = result[i - 1] + nums[i];
+  }
+  return result;
+};
+
+//Time complexity: O(n)  Space complexity: O(1)
+
+
+//Solution 3 Using Input Array for 
+var runningSum = function(nums) {
+    for(let i = 1; i < nums.length; i++){
+        nums[i] += nums[i - 1]
+    }
+    return nums;
+};
+
+//Time complexity: O(n)  Space complexity: O(1)
