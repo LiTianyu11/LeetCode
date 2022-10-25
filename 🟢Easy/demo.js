@@ -1,14 +1,25 @@
-let nums = [1, 2, 3, 4];
-let arr = new Array(nums.length);
-arr[0] = nums[0];
+var isIsomorphic = function(s, t) {
+    // Base case: for different length of two strings...
+    if(s.length != t.length)
+        return false;
+    // Create two maps for s & t strings...
+    let map1 = [];
+    let map2 = [];
+    // Traverse all elements through the loop...
+    for(let idx = 0; idx < s.length; idx++){
+        // Compare the maps, if not equal, return false...
+       
+        // Insert each character if string s and t into seperate map...
+        map1[s.charAt(idx)] = idx + 1;
+        map2[t.charAt(idx)] = idx + 1;
 
-for (let i = 1; i < nums.length; i++) {
-    console.log(i)
-    console.log(nums)
-    console.log(arr)
-    arr[i] = arr[i-1] + nums[i]
-   
-    
-    
-}
+        console.log(`map1 : ${s.charAt(idx)}  ${map1[s.charAt(idx)]}`,map1)
+        console.log(`map2 : ${t.charAt(idx)}  ${map2[t.charAt(idx)]}`,map2)
+        
+    }
+};
 
+//s = "egg", t = "add"
+
+
+console.log(isIsomorphic("egg","add"))
