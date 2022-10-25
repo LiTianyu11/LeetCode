@@ -8,7 +8,6 @@ Two strings s and t are isomorphic if the characters in s can be replaced to get
 All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
 */
 
-
 //Solution 1
 var isIsomorphic = function (s, t) {
   if (s.length != t.length) return false;
@@ -17,6 +16,8 @@ var isIsomorphic = function (s, t) {
   const map2 = [256];
 
   for (let idx = 0; idx < s.length; idx++) {
+    //console.log(map1, s.charAt(idx),map1[s.charAt(idx)] )
+    //console.log(map2, t.charAt(idx), map2[t.charAt(idx)])
     if (map1[s.charAt(idx)] != map2[t.charAt(idx)]) return false;
 
     map1[s.charAt(idx)] = idx + 1;
