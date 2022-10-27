@@ -19,20 +19,37 @@ Output: 0
 */
 
 //Solution 1 SWA(Sliding Window Algorithm)
+//1.1 [left , right)
 var minSubArrayLen = function (target, nums) {
   const len = nums.length;
   let left = (right = sum = 0),
     res = len + 1;
   while (right < len) {
     sum += nums[right];
-    right++;
-    // 窗口滑动
+    right++; //[left , right)
     while (sum >= target) {
-      // r始终为开区间 [l, r)
-      res = res < right - left ? res : right - left;
+      res = res < right - left ? res : right - left; //[left , right)
       sum -= nums[left];
       left++;
     }
+  }
+  return res > len ? 0 : res;
+};
+
+//1.2 [left , right]
+var minSubArrayLen = function (target, nums) {
+  const len = nums.length;
+  let left = (right = sum = 0),
+    res = len + 1;
+  while (right < len) {
+    sum += nums[right];
+
+    while (sum >= target) {
+      res = res < right - left + 1 ? res : right - left + 1; //[left , right]
+      sum -= nums[left];
+      left++;
+    }
+    right++; //[left , right]
   }
   return res > len ? 0 : res;
 };
