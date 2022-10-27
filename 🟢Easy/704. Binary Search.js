@@ -26,7 +26,7 @@ var search = function (nums, target) {
   let left = 0,
     right = nums.length - 1,
     middle = 0;
-  while (left < right) {
+  while (left <= right) {
     middle = left + ((right - left) >> 1);
     if (nums[middle] < target) {
       left = middle + 1;
