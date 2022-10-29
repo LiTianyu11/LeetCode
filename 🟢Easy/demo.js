@@ -1,62 +1,55 @@
-// const list = {
-//     head: {   // head = node1
-//         value: 6
-//         next: {
-//             value: 10
-//             next: {
-//                 value: 12
-//                 next: {
-//                     value: 3
-//                     next: null
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// };
+var MyLinkedList = function() {
+  this.size = 0;
+  this.head = new ListNode(0);
+};
 
-class ListNode {
-  constructor(data) {
-    this.data = data;
-    this.next = null;
+MyLinkedList.prototype.get = function(index) {
+  if (index < 0 || index >= this.size) {
+      return -1;
   }
+  let cur = this.head;
+  for (let i = 0; i <= index; i++) {
+      cur = cur.next;
+  }
+  return cur.val;
+};
+
+MyLinkedList.prototype.addAtHead = function(val) {
+  this.addAtIndex(0, val);
+};
+
+MyLinkedList.prototype.addAtTail = function(val) {
+  this.addAtIndex(this.size, val);
+};
+
+MyLinkedList.prototype.addAtIndex = function(index, val) {
+  if (index > this.size) {
+      return;
+  }
+  index = Math.max(0, index);
+  this.size++;
+  let pred = this.head;
+  for (let i = 0; i < index; i++) {
+      pred = pred.next;
+  }
+  let toAdd = new ListNode(val);
+  toAdd.next = pred.next;
+  pred.next = toAdd;
+};
+
+MyLinkedList.prototype.deleteAtIndex = function(index) {
+  if (index < 0 || index >= this.size) {
+      return;
+  }
+  this.size--;
+  let pred = this.head;
+  for (let i = 0; i < index; i++) {
+      pred = pred.next;
+  }
+  pred.next = pred.next.next;
+};
+
+function ListNode(val, next) {
+  this.val = (val===undefined ? 0 : val)
+  this.next = (next===undefined ? null : next)
 }
-
-// linkedlist class
-class LinkedList {
-  constructor() {
-    this.head = null;
-    this.size = 0;
-  }
-
-  add(data) {
-    // creates a new node
-    var node = new ListNode(data);
-
-    // to store current node
-    var current;
-
-    // if list is Empty add the
-    // element and make it head
-    if (this.head == null) this.head = node;
-    else {
-      current = this.head;
-
-      // iterate to the end of the
-      // list
-      while (current.next) {
-        current = current.next;
-      }
-
-      // add node
-      current.next = node;
-    }
-    this.size++;
-  }
-}
-
-let list = new LinkedList();
-list.add(3);
-list.add(5)
-list.add(6)
-
