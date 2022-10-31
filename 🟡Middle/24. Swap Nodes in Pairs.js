@@ -38,3 +38,18 @@ var swapPairs = function (head) {
   }
   return dummyHead.next;
 };
+
+// Soultion 2
+var swapPairs = function (head) {
+  let DummyHead = new ListNode(0, head);
+  let cur = DummyHead;
+  while (cur.next && cur.next.next) {
+    let temp = cur.next,
+      temp1 = cur.next.next;
+    temp.next = temp1.next;
+    cur.next = temp1;
+    temp1.next = temp;
+    cur = temp;
+  }
+  return DummyHead.next;
+};
