@@ -33,3 +33,16 @@ var reverseList = function (head) {
   // temp = cur = null;
   return pre;
 };
+
+// Soulution 2 Recursive
+var reverse = function (pre, head) {
+  if (!head) return pre;
+  const temp = head.next;
+  head.next = pre;
+  pre = head;
+  return reverse(pre, temp); // head = temp
+};
+
+var reverseList = function (head) {
+  return reverse(null, head); //pre = null
+};
