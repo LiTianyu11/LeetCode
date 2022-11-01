@@ -22,12 +22,27 @@ Output: [1]
 
 */
 
-//Solution 1
+//Solution 1  fast === null , break
 var removeNthFromEnd = function (head, n) {
   let dummyHead = new ListNode(0, head),
     fast = (slow = dummyHead);
   while (n-- >= 0 && fast) fast = fast.next;
   while (fast) {
+    slow = slow.next;
+    fast = fast.next;
+  }
+  slow.next = slow.next.next;
+  return dummyHead.next;
+};
+
+//Solution 2 fast.next === null , break
+var removeNthFromEnd = function (head, n) {
+  let dummyHead = new ListNode(0, head),
+    slow = (fast = ret);
+  while (n--) {
+    fast = fast.next;
+  }
+  while (fast.next) {
     slow = slow.next;
     fast = fast.next;
   }
