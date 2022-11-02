@@ -19,19 +19,16 @@ Output: []
 
 */
 
-
 //Solution 1
-var removeElements = function(head, val) {
-    const dummyHead = new ListNode(0);
-    dummyHead.next = head;
-    let temp = dummyHead;
-    while (temp.next !== null) {
-        if (temp.next.val == val) {
-            temp.next = temp.next.next;
-        } else {
-            temp = temp.next;
-        }
+var removeElements = function (head, val) {
+  const dummyHead = new ListNode(0, head);
+  let cur = dummyHead;
+  while (cur.next != null) {
+    if (cur.next.val === val) {
+      cur.next = cur.next.next;
+    } else {
+      cur = cur.next;
     }
-    return dummyHead.next;
+  }
+  return dummyHead.next;
 };
-
