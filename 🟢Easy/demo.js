@@ -1,6 +1,15 @@
-var arr = [
-  { key: 'foo', val: 'bar' },
-  { key: 'hello', val: 'world' }
-];
+var twoSum = function (nums, target) {
+  let hash = {};
+ 
+  for (let i = 0; i < nums.length; i++) {
+    
+    console.log(hash);
+    if (hash[target - nums[i]] !== undefined) {
+      return [i, hash[target - nums[i]]];
+    }
+    hash[nums[i]] = i;
+  }
+  return [];
+};
 
-var result = new Map(arr.map(i => [i.key, i.val]));
+twoSum([2,7,11,15],17)
