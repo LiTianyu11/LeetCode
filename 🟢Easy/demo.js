@@ -1,24 +1,6 @@
-let arr = ("" + 12).split("");
-console.log(arr);
+var arr = [
+  { key: 'foo', val: 'bar' },
+  { key: 'hello', val: 'world' }
+];
 
-arr.reverse((total, num) => {
-  return total + num * num;
-});
-
-console.log(arr);
-
-var isHappy = function (n) {
-  let set = new Set();
-  let totalCount;
-  while (totalCount !== 1) {
-    let arr = ("" + (totalCount || n)).split("");
-    totalCount = arr.reduce((total, num) => {
-      return total + num * num;
-    }, 0);
-    if (set.has(totalCount)) {
-      return false;
-    }
-    set.add(totalCount);
-  }
-  return true;
-};
+var result = new Map(arr.map(i => [i.key, i.val]));
