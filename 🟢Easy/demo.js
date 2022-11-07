@@ -1,15 +1,14 @@
-var twoSum = function (nums, target) {
-  let hash = {};
- 
-  for (let i = 0; i < nums.length; i++) {
-    
-    console.log(hash);
-    if (hash[target - nums[i]] !== undefined) {
-      return [i, hash[target - nums[i]]];
-    }
-    hash[nums[i]] = i;
+var canConstruct = function (ransomNote, magazine) {
+  const strArr = new Array(26).fill(0),
+    base = "a".charCodeAt();
+  for (const s of magazine) {
+    const index = s.charCodeAt() - base;
+    strArr[index]++;
   }
-  return [];
+  for (const s of ransomNote) {
+    const index = s.charCodeAt() - base;
+    if (!strArr[index]) return false;
+    strArr[index]--;
+  }
+  return true;
 };
-
-twoSum([2,7,11,15],17)
