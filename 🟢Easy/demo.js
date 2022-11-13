@@ -1,25 +1,18 @@
-var replaceSpace = function (s) {
-    const arr = Array.from(s);
-    console.log(arr);
-    let count = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === ' ') { count++; }
+var removeDuplicates = function (s) {
+  s = [...s];
+  let top = -1; // 指向栈顶元素的下标
+  for (let i = 0; i < s.length; i++) {
+    if (top === -1 || s[top] !== s[i]) {
+      // top === -1 即空栈
+      top++;
+      s[top] = s[i]; // 入栈
+    } else {
+      top--; // 推出栈
     }
-    console.log(count);
-    let f = arr.length + count * 2 - 1;
-    console.log(f);
-    for (let i = arr.length - 1; i >= 0; i--) {
-        console.log(arr);
-        if (arr[i] === ' ') {
-            arr[f--] = '0';
-            arr[f--] = '2';
-            arr[f--] = '%';
-        } else {
-            arr[f] = arr[i];
-            f--;
-        }
-    }
-    return arr.join('')
+  }
+  s.length = top + 1; // 栈顶元素下标 + 1 为栈的长度
+
+  return s.join("");
 };
 
-replaceSpace("We are happy.")
+removeDuplicates("abbaca");
