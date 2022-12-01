@@ -1,12 +1,10 @@
-# 131. 分割回文串
-
 [https://leetcode.cn/problems/palindrome-partitioning/description/](https://leetcode.cn/problems/palindrome-partitioning/description/)
 
 [https://www.programmercarl.com/0131.分割回文串.html#javascript](https://www.programmercarl.com/0131.%E5%88%86%E5%89%B2%E5%9B%9E%E6%96%87%E4%B8%B2.html#javascript)
 
 # 代码
 
-![Untitled](131%20%E5%88%86%E5%89%B2%E5%9B%9E%E6%96%87%E4%B8%B2%20416412b0285d44689ac07c84f3fa7c24/Untitled.png)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a1e55704-5a16-4633-b679-61ebb13bddba/Untitled.png)
 
 ```jsx
 
