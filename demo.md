@@ -10,8 +10,8 @@
   
 - 若参数的起始位置大于结束位置，则输出空字符串""
   
-  <br>
-  
+
+<br>
 
 **`String.prototype.substring()`**
 
@@ -22,12 +22,16 @@
 - 若参数的起始位置大于结束位置，会输出交换起始位置和结束位置的子串`str.substring(4,2) => str.substring(2,4)`
   
 
+<br>
+
 **`String.prototype.substr()`**  已有很多浏览器不在支持
 
 - substr(起始位置，裁剪长度)
   
 - 起始位置支持负数，-1代表字符串最后一个字符，-2代表倒数第二个字符
   
+
+<br>
 
 ## 查找字符串
 
@@ -38,12 +42,16 @@
 - 从`position`（可选，默认0）开始搜索，返回第一次找到`searchString`的位置下标，若没找到返回-1
   
 
+<br>
+
 **`String.prototype.lastIndexOf()`**
 
 - `lastIndexOf(searchString, position)`
   
 - 从`position`（可选，默认0）开始搜索，返回最后一次找到`searchString`的位置下标，若没找到返回-1
   
+
+<br>
 
 **`String.prototype.charAt()`**
 
@@ -52,12 +60,16 @@
 - 返回`index`位置的字符，若index超出字符串长度则返回空字符串
   
 
+<br>
+
 **`String.prototype.includes()`**
 
 - `includes(searchString, position)`
   
 - 从`position`（可选，默认0）开始搜索，若找到`searchString`则返回`true`，否则返回`false`
   
+
+<br>
 
 **`String.prototype.startsWith()`**
 
@@ -66,12 +78,16 @@
 - 若在`position`（可选，默认0）位置找到`searchString` 则返回`true`，否则返回`false`
   
 
+<br>
+
 **`String.prototype.endsWith()`**
 
 - `endsWith(searchString, endPosition)`
   
 - 若在`endPosition`（可选，默认为最后一个字符下标+1，即str.length）位置找到`searchString` 则返回`true`，否则返回`false`
   
+
+<br>
 
 ```jsx
 //String.prototype.startsWith()和String.prototype.endsWith()的差别
