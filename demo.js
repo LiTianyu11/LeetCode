@@ -1,11 +1,36 @@
-const str = "012345";
-// 0  1   2  3   4  5
-//-6 -5  -4 -3  -2 -1
-console.log(str.substring(-5,2)) // 0 1
-console.log(str.slice(-5,2)) // 1
+/**
+  function ucFirst(str) {
+    return str[0].toUpperCase() + str.slice(1);
+  }
+  
+  console.log(ucFirst("nihao"));
+  
+  function checkSpam(str) {
+    if (str.includes("viagra") || str.includes("xxx")) return true;
+    else return false;
+  }
+  console.log(checkSpam("xxxx"));
+  
+  function truncate(str, maxlength) {
+    if (maxlength >= str.length) {
+      return str;
+    } else {
+      return str.slice(0, maxlength - 1) + "…";
+    }
+  }
+  
+  console.log(truncate("What I'd like to tell on this topic is:", 3));
+  
+  function extractCurrencyValue(str) {
+    let index = '$120'.indexOf('$')
+    return str.slice(index  + 1);
+  }
+  
+  console.log(extractCurrencyValue("$120"));
+  console.log()
+*/
 
-console.log(str.substring(-5,-2)) //""
-console.log(str.slice(-1,-1)) //123
+let str = '0123';
+console.log(str.charAt(4))
 
-console.log(str.substring(5,2)) // = str.substring(2,5)
-console.log(str.slice(5,2))   //""
+
