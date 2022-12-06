@@ -103,13 +103,17 @@ console.log(str.endsWith('0',1)) //true
 
 # 字符串转化为Unicode
 
-## String.fromCodePoint()
+# H1
 
-### String.fromCodePoint()
+## H2
 
-##### String.fromCodePoint()
+### H3
 
-###### String.fromCodePoint()
+#### H4
+
+##### H5
+
+###### H6
 
 `**21**`
 
