@@ -34,8 +34,8 @@
 - `indexOf(searchString, position)`
   
 - 从`position`（可选，默认0）开始搜索，返回第一次找到`searchString`的位置下标，若没找到返回-1
-  
-
+      
+ 
 **`String.prototype.lastIndexOf()`**
 
 - `lastIndexOf(searchString, position)`
