@@ -13,7 +13,7 @@
 
 <br>
 
-**String.prototype.substring()**
+**`String.prototype.substring()`**
 
 - substring(起始位置下标， 结束位置下标-可选)，会裁剪字符串起始位置到结束位置（不包括结束位置）
   
@@ -99,11 +99,21 @@ console.log(str.startsWith('0',0)) // true
 console.log(str.endsWith('0',1)) //true
 ```
 
-## 字符串转化为Unicode
+<br>
 
-[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt)
+# 字符串转化为Unicode
 
-String.fromCodePoint()
+## String.fromCodePoint()
+
+### String.fromCodePoint()
+
+##### String.fromCodePoint()
+
+###### String.fromCodePoint()
+
+`**21**`
+
+**`21`**
 
 ## 获取字符串
 
