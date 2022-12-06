@@ -2,7 +2,7 @@
 
 **需注意区分slice()与substring()，在参数为负数，起始位置大于结束位置时，两者的差异。**
 
-**`String.prototype.slice()`**
+#### String.prototype.slice()
 
 - slice(起始位置下标， 结束位置下标-可选)，会裁剪字符串起始位置到结束位置（不包括结束位置）
   
@@ -13,7 +13,7 @@
 
 <br>
 
-**`String.prototype.substring()`**
+#### String.prototype.substring()
 
 - substring(起始位置下标， 结束位置下标-可选)，会裁剪字符串起始位置到结束位置（不包括结束位置）
   
@@ -24,8 +24,10 @@
 
 <br>
 
-**`String.prototype.substr()`**  已有很多浏览器不在支持
+#### String.prototype.substr()
 
+- 已有很多浏览器不在支持
+  
 - substr(起始位置，裁剪长度)
   
 - 起始位置支持负数，-1代表字符串最后一个字符，-2代表倒数第二个字符
@@ -35,7 +37,7 @@
 
 ## 查找字符串
 
-**`String.prototype.indexOf()`**
+#### String.prototype.indexOf()
 
 - `indexOf(searchString, position)`
   
@@ -44,7 +46,7 @@
 
 <br>
 
-**`String.prototype.lastIndexOf()`**
+#### String.prototype.lastIndexOf()
 
 - `lastIndexOf(searchString, position)`
   
@@ -53,7 +55,7 @@
 
 <br>
 
-## String.prototype.charAt()
+#### String.prototype.charAt()
 
 - `charAt(index)`
   
@@ -62,7 +64,7 @@
 
 <br>
 
-#### String.prototype.includes()
+#### String.prototype.includes()
 
 - `includes(searchString, position)`
   
@@ -71,7 +73,7 @@
 
 <br>
 
-##### String.prototype.startsWith()
+#### String.prototype.startsWith()
 
 - `startsWith(searchString, position)`
   
@@ -80,7 +82,7 @@
 
 <br>
 
-**`String.prototype.endsWith()`**
+#### String.prototype.endsWith()
 
 - `endsWith(searchString, endPosition)`
   
@@ -101,25 +103,7 @@ console.log(str.endsWith('0',1)) //true
 
 <br>
 
-# 字符串转化为Unicode
-
-# H1 String.prototype.endsWith()
-
-## H2 String.prototype.endsWith()
-
-### H3 String.prototype.endsWith()
-
-#### H4 String.prototype.endsWith()
-
-##### H5 String.prototype.endsWith()
-
-###### H6 String.prototype.endsWith()
-
-
-`**21**`
-
-**`21`**
-
 ## 获取字符串
 
 To get a character, use: [] or at method.
+
