@@ -60,7 +60,7 @@
 
 #### String.prototype.includes()
 
-- `includes(searchString, position)`
+- `includes(searchString, [position])`
 
 - 从`position`（可选，默认0）开始搜索，若找到`searchString`则返回`true`，否则返回`false`
 
@@ -68,7 +68,7 @@
 
 #### String.prototype.startsWith()
 
-- `startsWith(searchString, position)`
+- `startsWith(searchString,[position])`
 
 - 若在`position`（可选，默认0）位置找到`searchString` 则返回`true`，否则返回`false`
 
@@ -76,7 +76,7 @@
 
 #### String.prototype.endsWith()
 
-- `endsWith(searchString, endPosition)`
+- `endsWith(searchString, [position])`
 
 - 若在`endPosition`（可选，默认为最后一个字符下标+1，即str.length）位置找到`searchString` 则返回`true`，否则返回`false`
 
@@ -97,7 +97,5 @@ console.log(str.endsWith('0',1)) //true
 ## 获取字符串
 
 To get a character, use: [] or at method.
-
-
 
 ### 
