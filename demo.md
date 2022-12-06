@@ -13,7 +13,7 @@
 
 <br>
 
-**`String.prototype.substring()`**
+**String.prototype.substring()**
 
 - substring(起始位置下标， 结束位置下标-可选)，会裁剪字符串起始位置到结束位置（不包括结束位置）
   
