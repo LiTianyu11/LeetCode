@@ -94,7 +94,17 @@ console.log(str.endsWith('0',1)) //true
 
 <br>
 
-## 获取字符串
+## 字符串与Unicode
+
+#### String.prototype.charCodeAt()
+
+- ```jsx
+  charCodeAt(index) //index合法长度为0-字符串长度，如果index不是数字，默认为0
+  ```
+
+
+
+
 
 To get a character, use: [] or at method.
 
