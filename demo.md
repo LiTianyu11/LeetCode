@@ -53,7 +53,7 @@
 
 <br>
 
-**`String.prototype.charAt()`**
+## String.prototype.charAt()
 
 - `charAt(index)`
   
@@ -62,7 +62,7 @@
 
 <br>
 
-**`String.prototype.includes()`**
+#### String.prototype.includes()
 
 - `includes(searchString, position)`
   
@@ -71,7 +71,7 @@
 
 <br>
 
-**`String.prototype.startsWith()`**
+##### String.prototype.startsWith()
 
 - `startsWith(searchString, position)`
   
@@ -114,6 +114,7 @@ console.log(str.endsWith('0',1)) //true
 ##### H5 String.prototype.endsWith()
 
 ###### H6 String.prototype.endsWith()
+
 
 `**21**`
 
