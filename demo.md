@@ -103,17 +103,17 @@ console.log(str.endsWith('0',1)) //true
 
 # 字符串转化为Unicode
 
-# H1
+# H1 String.prototype.endsWith()
 
-## H2
+## H2 String.prototype.endsWith()
 
-### H3
+### H3 String.prototype.endsWith()
 
-#### H4
+#### H4 String.prototype.endsWith()
 
-##### H5
+##### H5 String.prototype.endsWith()
 
-###### H6
+###### H6 String.prototype.endsWith()
 
 `**21**`
 
